@@ -63,14 +63,17 @@ hr{
 
 #forecastForm{
     margin: 100px auto 50px auto;
-    width: 450px;
+    width: 90%;
+    max-width: 500px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #forecastForm > input{
     font-size: 20px;
+    margin-top: 10px;
 }
 
 #forecastForm > input[type='text']{
@@ -93,18 +96,37 @@ hr{
 }
 
 #results{
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     margin: 20px auto 50px auto;
 }
 
-#results > h2{
+#results > h2, #errorMessage > h2{
     font-size: 40px;
+}
+
+#errorMessage > h2{
+    text-align: center;   
+    color: #732C2A;
+}
+
+
+#errorMessage > p{
+    text-align: center;
+    color: #B04341;
+    font-size: 23px;
 }
 
 #results > .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#results > .row > .col {
+    margin: 0 10px 0 10px;
+    width: 150px;
 }
 
 #results > .row > .col > p{
@@ -114,4 +136,9 @@ hr{
 
 #results > .row > .col > h3{
     font-size: 25px;
+    text-align: center;
+    height: 60px;
+    display: table-cell;
+    width: 150px;
+    vertical-align: middle;
 }
