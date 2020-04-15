@@ -9,6 +9,8 @@ const utils = require('./utils/utils')
 const viewsPath = path.join(__dirname, '..\\templates\\views')
 const partialsPath = path.join(__dirname, '..\\templates\\partials')
 
+// Heroku port, defaults to 3000
+const PORT = process.env.PORT || 3000
 // Handlebars configuration
 
 app.set('view engine', 'hbs');
@@ -54,6 +56,6 @@ app.get('*', (req, res) => {
     res.render('fourOfour', { name: 'Jorge Garcia' })
 })
 
-app.listen(3000, () => {
-    console.log("App is now running");
+app.listen(PORT, () => {
+    console.log("App is now running", PORT);
 })

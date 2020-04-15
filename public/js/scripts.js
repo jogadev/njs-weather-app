@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', (doc, evt) => {
     const cityForm = document.querySelector('#formCity');
     cityForm.addEventListener('submit', evt => {
         evt.preventDefault();
-        fetch('http://localhost:3000/weather?city='+evt.target.city.value).then(response => {
+        fetch('/weather?city='+evt.target.city.value).then(response => {
             response.json().then(result => {
                 if (result.code != 200) {
                     console.error("An error", result)
