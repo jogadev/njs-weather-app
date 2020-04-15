@@ -6,8 +6,8 @@ const decodeCoords = require('./utils/cityCoordinates')
 const utils = require('./utils/utils')
 
 // Constants and paths
-const viewsPath = path.join(__dirname, '..\\templates\\views')
-const partialsPath = path.join(__dirname, '..\\templates\\partials')
+const viewsPath = path.join(__dirname, '../templates/views')
+const partialsPath = path.join(__dirname, '../templates/partials')
 
 // Heroku port, defaults to 3000
 const PORT = process.env.PORT || 3000
@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3000
 
 app.set('view engine', 'hbs');
 app.set('views', viewsPath)
-app.use(express.static(path.join(__dirname, '..\\public')));
+app.use(express.static(path.join(__dirname, '../public')));
 hbs.registerPartials(partialsPath)
 
 // Express magique
